@@ -11,6 +11,24 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+///const titleCased = () => {
+ /// return tutorials
+///}
+
+function titleCased() {
+  return tutorials.map(function (tutorial) {
+let wordsArray= tutorial.split(" ")
+let capitalizedArray= wordsArray.map(function (word){
+  let capitalWord= word.charAt(0).toUpperCase() + word.slice(1)
+  return capitalWord
+})
+return capitalizedArray.join (" ")
+
+ 
+
+  })
 }
+
+/// step 1: Capitalize first letter
+/// step 2: add the rest of the letters
+/// step 3: after line 24- convert array of tutorials back into one (join method)
